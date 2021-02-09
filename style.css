@@ -1,0 +1,53 @@
+body{
+    background-image: url(https://cliply.co/wp-content/uploads/2020/01/401911130_THINKING_FACE_BG_1920x1080.png);
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.judul{
+    padding-top: 100px;
+    text-align: center;
+}
+
+#kirim{
+    box-shadow: 10px 10px 5px gray;
+}
+
+#kirim:hover{
+    background-color: rgb(62, 189, 50);
+    color: honeydew;
+    transition: 0.6s;
+}
+
+#kumpulJawaban:hover{
+    background-color: rgb(62, 189, 50);
+    color: honeydew;
+    transition: 0.6s;
+}
+
+.angka{
+    margin: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#angka{
+    box-shadow: 4px 3px 5px gray;
+    text-align: center;
+}
+
+.catatan{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0 470px;
+}
+
+button{
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 40px;
+    border-radius: 20px;
+}
