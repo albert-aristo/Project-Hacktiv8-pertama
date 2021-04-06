@@ -5,33 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://www.pikpng.com/pngl/m/604-6046021_kisspng-computer-icons-human-brain-human-head-icon.png">
-    <title>Thinking</title>
+    <title>projectAristo</title>
 </head>
 <body>
     <div class="judul">
-        <h1>Add-1</h1>
+        <h1>project</h1>
     </div>
-    <div class="angka">
-        <h3>0 - 0 - 0 - 0</h3>
-        <h3>level 1</h3>
-        <button id="kirim" type="button">Mulai</button>
-        <br>
-        <br>
-        <input id="angka" type="number">
-        <br>
-        <br>
-        <button id="kumpulJawaban" type="submit" value="submit">Kumpul</button>
-        <br>
-        <br>
+    <div class="pertanyaan">
+        <div class="soal">
+            <h1 id="angkaDigit">0 - 0 - 0 - 0</h1>
+            <button type="button" id="start-btn" onclick="angkaRandom()">Start!</button>
+        </div>
     </div>
-    <div class="catatan">
-        <stu>akan muncul 4 angka digit dengan random,anda harus hafal berapa angkanya dan tambah nilai sesuai levelnya dan tulis di outputnya
-            anda ada waktu sebanyak 3 detik mulai dari level 1
-            <br>
-            jawabannya hanya bisa 0-9,jika angka add lebih besar dari 9,maka jawabannya adalah 0
-        </stu>
+    <div class="jawaban">
+        <div class="userInput">
+            <form class="box-jawaban" onsubmit="inputJawaban(event)">
+                <div class="kotakJawaban">
+                    <input type="text" id="first" maxlength="1" autoComplete="off" onkeyup="clickEvent(this,'second')">
+                    <input type="text" id="second" maxlength="1" autoComplete="off" onkeyup="clickEvent(this,'third')">
+                    <input type="text" id="third" maxlength="1" autoComplete="off" onkeyup="clickEvent(this,'fourth')">
+                    <input type="text" id="fourth" maxlength="1" autoComplete="off" onkeyup="clickEvent(this,'btn-submit')">
+                </div>
+                    <input type="submit" value="submit" id="btn-submit">
+            </form>
+        </div>
     </div>
-    <script src="index.js"></script>
+    <div class="fitur">
+        <div class="waktu">
+            <h4>Batas Waktu <br> <select id="batasWaktu">
+                <option value="10000">10</option>
+                <option value="7000">7</option>
+                <option value="5000">5</option>
+                <option value="3000">3</option>
+            </select></h4>
+        </div>
+        <div class="operasional">
+            <h4>Operasional <br> <select id="operasi">
+                <option value="addition">Tambahan</option>
+                <option value="subtract">Pengurangan</option>
+                <option value="divide">Membagi</option>
+                <option value="multiplying">Perkalian</option>
+                <option value="Modulo">Modulo</option>
+            </select></h4>
+        </div>
+        <div class="batasPanjang">
+            <h4>Batas Digit <br> <select id="batasDigit">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+            </select></h4>
+        </div>
+        <div class="nilaiTambahan">
+            <h4>Nilai <br> <select id="nilaiTambahan">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+            </select></h4>
+        </div>
+    </div>
+    <script src="fungsi.js"></script>
 </body>
 </html>
